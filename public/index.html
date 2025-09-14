@@ -1,103 +1,302 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ByteCare - Soluções em TI</title>
-    <meta name="description" content="Consultoria especializada em Tecnologia da Informação">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Suporte de TI para Empresas | ByteCare - Soluções Profissionais</title>
+  <meta name="description" content="Suporte de TI especializado para pequenas e médias empresas em São Paulo. Atendimento remoto e presencial, gestão de servidores, firewall, backups e muito mais." />
+  <meta name="keywords" content="Suporte de TI, suporte técnico para empresas, consultoria em TI, gestão de servidores, segurança da informação, São Paulo, ByteCare" />
+  <meta name="author" content="ByteCare" />
+  <link rel="canonical" href="https://bytecare.online/suporte-ti" />
+  <style>
+    /* Reset e base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      background: #f4f7fa;
+      color: #222;
+      line-height: 1.6;
+    }
+    a {
+      color: #0073e6;
+      text-decoration: none;
+    }
+    a:hover, a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+    header {
+      background: #004080;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    /* Espaço para logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo img {
+      height: 50px;
+      width: auto;
+      display: block;
+    }
+    .logo-text {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      user-select: none;
+    }
+    nav {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 4px;
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover, nav a:focus {
+      background-color: rgba(255, 255, 255, 0.15);
+      outline: none;
+    }
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 60px;
+    }
+    h2 {
+      color: #004080;
+      font-size: 2rem;
+      border-bottom: 3px solid #0073e6;
+      padding-bottom: 8px;
+      margin-bottom: 25px;
+      max-width: max-content;
+    }
+    ul.services-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 25px;
+    }
+    ul.services-list li {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 25px 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    ul.services-list li:hover, ul.services-list li:focus-within {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      outline: none;
+    }
+    ul.services-list h3 {
+      margin-top: 0;
+      color: #0073e6;
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+    ul.services-list p {
+      font-size: 1rem;
+      color: #444;
+    }
+    .cta {
+      background: #0073e6;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,115,230,0.3);
+      margin-bottom: 60px;
+    }
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    .cta p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn-primary {
+      background: #ffcc00;
+      color: #004080;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 15px 45px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-primary:hover, .btn-primary:focus {
+      background: #e6b800;
+      outline: none;
+    }
+    footer {
+      background: #003366;
+      color: #ccc;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+    /* FAQ */
+    .faq dt {
+      font-weight: 700;
+      margin-top: 20px;
+      cursor: pointer;
+      color: #004080;
+    }
+    .faq dd {
+      margin-left: 20px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+        gap: 15px;
+      }
+      .logo-text {
+        font-size: 1.5rem;
+      }
+      .cta h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>ByteCare</h1>
-                <span>Soluções em TI</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>Soluções Tecnológicas para o seu Negócio</h2>
-            <p>Consultoria especializada em infraestrutura, cloud computing e segurança da informação</p>
-            <a href="#contato" class="cta-button">Fale Conosco</a>
-        </div>
+  <header role="banner">
+    <div class="logo" aria-label="Logo ByteCare">
+      <!-- Espaço para logo: substitua o src pelo caminho do seu logo -->
+      <img src="logo-bytecare.svg" alt="Logo ByteCare" />
+      <span class="logo-text">ByteCare</span>
+    </div>
+    <nav role="navigation" aria-label="Menu principal">
+      <a href="#servicos" tabindex="0">Serviços</a>
+      <a href="#vantagens" tabindex="0">Vantagens</a>
+      <a href="#faq" tabindex="0">Dúvidas</a>
+      <a href="#contato" tabindex="0">Contato</a>
+    </nav>
+  </header>
+  <main>
+    <section id="servicos" aria-labelledby="servicos-title" role="region">
+      <h2 id="servicos-title">O que oferecemos?</h2>
+      <ul class="services-list">
+        <li tabindex="0">
+          <h3>Suporte Remoto Ágil e Seguro</h3>
+          <p>Atendimento via telefone e acesso remoto para resolver problemas com rapidez e segurança.</p>
+        </li>
+        <li tabindex="0">
+          <h3>Suporte Presencial para Emergências</h3>
+          <p>Visitas agendadas ou emergenciais para garantir que sua empresa não pare.</p>
+        </li>
+        <li tabindex="0">
+          <h3>Gestão Completa de Servidores</h3>
+          <p>Implantação e administração diária para manter seus servidores estáveis e seguros.</p>
+        </li>
+        <li tabindex="0">
+          <h3>Gestão e Otimização de E-mails</h3>
+          <p>Gerenciamento completo para que sua comunicação seja eficiente e segura.</p>
+        </li>
+        <li tabindex="0">
+          <h3>Firewall e Segurança de Rede</h3>
+          <p>Implantação e monitoramento para proteger sua empresa contra ameaças online.</p>
+        </li>
+        <li tabindex="0">
+          <h3>Configuração de Ativos de Rede</h3>
+          <p>Gerenciamento de switches, roteadores, no-breaks, impressoras e outros equipamentos.</p>
+        </li>
+        <li tabindex="0">
+          <h3>Consultoria de TI Personalizada</h3>
+          <p>Orientação estratégica para o melhor custo-benefício e crescimento tecnológico.</p>
+        </li>
+        <li tabindex="0">
+          <h3>Gestão de Backups Locais e na Nuvem</h3>
+          <p>Configuração e monitoramento para garantir a segurança dos seus dados.</p>
+        </li>
+        <li tabindex="0">
+          <h3>Implantação e Gestão de Antivírus</h3>
+          <p>Proteção com as melhores soluções do mercado para manter sua empresa segura.</p>
+        </li>
+      </ul>
     </section>
 
-    <section id="servicos" class="services">
-        <div class="container">
-            <h2>Nossos Serviços</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Consultoria em TI</h3>
-                    <p>Análise e otimização da infraestrutura de tecnologia da sua empresa.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Cloud Computing</h3>
-                    <p>Migração e gestão de ambientes em nuvem (AWS, Azure, Google Cloud).</p>
-                </div>
-                <div class="service-card">
-                    <h3>Segurança da Informação</h3>
-                    <p>Proteção de dados e sistemas contra ameaças cibernéticas.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Suporte Técnico</h3>
-                    <p>Atendimento especializado para resolver problemas de TI.</p>
-                </div>
-            </div>
-        </div>
+    <section id="vantagens" aria-labelledby="vantagens-title" role="region">
+      <h2 id="vantagens-title">Vantagens de contratar nosso suporte de TI</h2>
+      <ul>
+        <li><strong>Economia:</strong> Custo menor que manter equipe interna.</li>
+        <li><strong>Documentação Completa:</strong> Ambiente de TI documentado e atualizado.</li>
+        <li><strong>Suporte Preventivo:</strong> Monitoramento em tempo real e ações proativas.</li>
+        <li><strong>Resolução Rápida:</strong> Equipe capacitada para minimizar impactos.</li>
+        <li><strong>Planejamento Anual:</strong> Reuniões para alinhar investimentos e melhorias.</li>
+        <li><strong>Acesso Online:</strong> Acompanhe seus chamados em tempo real.</li>
+      </ul>
     </section>
 
-    <section id="sobre" class="about">
-        <div class="container">
-            <h2>Sobre Nós</h2>
-            <p>A ByteCare é uma empresa especializada em soluções de Tecnologia da Informação, focada em ajudar pequenas e médias empresas a otimizar seus recursos tecnológicos.</p>
-            <p>Nossa equipe possui mais de 10 anos de experiência no mercado, oferecendo soluções personalizadas para cada cliente.</p>
-        </div>
+    <section id="faq" aria-labelledby="faq-title" role="region">
+      <h2 id="faq-title">Dúvidas Frequentes</h2>
+      <dl class="faq">
+        <dt>O que é o serviço de Suporte da ByteCare?</dt>
+        <dd>Conjunto de serviços para garantir o funcionamento e segurança da infraestrutura tecnológica da sua empresa.</dd>
+
+        <dt>Quando devo contratar?</dt>
+        <dd>Desde o início do negócio para reduzir custos, evitar riscos e garantir eficiência tecnológica.</dd>
+
+        <dt>Quais os benefícios para minha empresa?</dt>
+        <dd>Manutenção contínua, segurança reforçada, projetos personalizados e melhorias constantes.</dd>
+
+        <dt>Qual o horário de atendimento?</dt>
+        <dd>De segunda a sexta, das 08:00 às 18:00, com suporte remoto e presencial.</dd>
+
+        <dt>Como é feita a transição se já tenho outro fornecedor?</dt>
+        <dd>A migração pode ser transparente ou personalizada conforme o perfil da empresa.</dd>
+
+        <dt>Atendem fora de São Paulo?</dt>
+        <dd>Sim, com cobrança de deslocamento conforme urgência e localidade.</dd>
+
+        <dt>Posso contratar serviços avulsos?</dt>
+        <dd>Sim, como antivírus ou consultoria, com custos diferenciados.</dd>
+      </dl>
     </section>
 
-    <section id="contato" class="contact">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            <div class="contact-info">
-                <p><strong>Telefone:</strong> <a href="tel:+5511974764971">(11) 97476-4971</a></p>
-                <p><strong>Email:</strong> <a href="mailto:contato@bytecare.online">contato@bytecare.online</a></p>
-                <p><strong>Site:</strong> <a href="https://bytecare.online" target="_blank">bytecare.online</a></p>
-            </div>
-            <form id="contact-form">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder="Seu Nome" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Seu Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" id="phone" name="phone" placeholder="Seu Telefone">
-                </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" placeholder="Sua Mensagem" required></textarea>
-                </div>
-                <button type="submit" class="cta-button">Enviar Mensagem</button>
-            </form>
-        </div>
+    <section id="contato" aria-labelledby="contato-title" role="region">
+      <h2 id="contato-title">Entre em Contato</h2>
+      <p>Telefone: <a href="tel:+5511974764971">11 97476-4971</a></p>
+      <p>Email: <a href="mailto:brayanbarb66@gmail.com">contato@bytecare.online</a></p>
+      <p>Endereço: avenida Adilson Dias de Souza 882 – Zardim Zaira, Mauá</p>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 ByteCare - Soluções em TI. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <section class="cta" role="region" aria-label="Chamada para ação">
+      <h2>Quer um suporte de TI confiável e eficiente?</h2>
+      <p>Contrate a ByteCare e tenha uma equipe especializada cuidando da tecnologia da sua empresa, garantindo segurança, agilidade e economia.</p>
+      <a href="mailto:contato@bytecare.online" class="btn-primary" aria-label="Enviar email para contato@bytecare.online">Peça seu Orçamento Online</a>
+    </section>
+  </main>
+  <footer role="contentinfo">
+    <p>© 2025 ByteCare - Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
